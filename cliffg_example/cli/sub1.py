@@ -13,6 +13,7 @@ class Sub1Create(cli.Shower):
         columns = []
         return self.format_output(columns, suites)
 
+
 class Sub1Show(cli.Shower):
     def get_parser(self, prog_name):
         parser = super(Sub1Show, self).get_parser(prog_name)
@@ -25,6 +26,7 @@ class Sub1Show(cli.Shower):
         columns = []
         return self.format_output(columns, suites)
 
+
 class Sub1List(cli.Lister):
     def get_parser(self, prog_name):
         parser = super(Sub1List, self).get_parser(prog_name)
@@ -34,6 +36,7 @@ class Sub1List(cli.Lister):
         suites = []
         columns = []
         return self.format_output(columns, suites)
+
 
 class Sub1Delete(cli.Command):
     def get_parser(self, prog_name):

@@ -10,7 +10,7 @@ class CliffgexampleShell(app.App):
         super(CliffgexampleShell, self).__init__(
             description='cliffg-example cli',
             version='0.1',
-            command_manager=commandmanager.CommandManager('subs'),
+            command_manager=commandmanager.CommandManager('cliffg_example'),
             deferred_help=True,
         )
 

@@ -13,6 +13,7 @@ class Sub2Create(cli.Shower):
         columns = []
         return self.format_output(columns, suites)
 
+
 class Sub2Update(cli.Shower):
     def get_parser(self, prog_name):
         parser = super(Sub2Update, self).get_parser(prog_name)
@@ -29,6 +30,7 @@ class Sub2Update(cli.Shower):
         columns = []
         return self.format_output(columns, suites)
 
+
 class Sub2Show(cli.Shower):
     def get_parser(self, prog_name):
         parser = super(Sub2Show, self).get_parser(prog_name)
@@ -40,4 +42,5 @@ class Sub2Show(cli.Shower):
         suites = []
         columns = []
         return self.format_output(columns, suites)
+
 
