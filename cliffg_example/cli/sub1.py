@@ -1,7 +1,7 @@
-from cliffg_example import cli
+from cliffg_example.utils import command
 
 
-class Sub1Create(cli.ShowOne):
+class Sub1Create(command.ShowOne):
     def get_parser(self, prog_name):
         parser = super(Sub1Create, self).get_parser(prog_name)
 #        parser.add_argument('body',
@@ -13,7 +13,7 @@ class Sub1Create(cli.ShowOne):
         return self.format_output({})
 
 
-class Sub1Show(cli.ShowOne):
+class Sub1Show(command.ShowOne):
     def get_parser(self, prog_name):
         parser = super(Sub1Show, self).get_parser(prog_name)
 #        parser.add_argument('name',
@@ -24,7 +24,7 @@ class Sub1Show(cli.ShowOne):
         return self.format_output({})
 
 
-class Sub1List(cli.Lister):
+class Sub1List(command.Lister):
     def get_parser(self, prog_name):
         parser = super(Sub1List, self).get_parser(prog_name)
         return parser
@@ -35,7 +35,7 @@ class Sub1List(cli.Lister):
         return self.format_output(columns, suites)
 
 
-class Sub1Delete(cli.Command):
+class Sub1Delete(command.Command):
     def get_parser(self, prog_name):
         parser = super(Sub1Delete, self).get_parser(prog_name)
 #        parser.add_argument('name',
