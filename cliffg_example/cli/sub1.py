@@ -1,6 +1,7 @@
 from cliffg_example import cli
 
-class Sub1Create(cli.Shower):
+
+class Sub1Create(cli.ShowOne):
     def get_parser(self, prog_name):
         parser = super(Sub1Create, self).get_parser(prog_name)
 #        parser.add_argument('body',
@@ -9,12 +10,10 @@ class Sub1Create(cli.Shower):
         return parser
 
     def take_action(self, parsed_args):
-        suites = []
-        columns = []
-        return self.format_output(columns, suites)
+        return self.format_output({})
 
 
-class Sub1Show(cli.Shower):
+class Sub1Show(cli.ShowOne):
     def get_parser(self, prog_name):
         parser = super(Sub1Show, self).get_parser(prog_name)
 #        parser.add_argument('name',
@@ -22,9 +21,7 @@ class Sub1Show(cli.Shower):
         return parser
 
     def take_action(self, parsed_args):
-        suites = []
-        columns = []
-        return self.format_output(columns, suites)
+        return self.format_output({})
 
 
 class Sub1List(cli.Lister):
