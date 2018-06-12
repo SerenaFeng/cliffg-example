@@ -36,6 +36,6 @@ class Sub2Show(cli.ShowOne):
         return parser
 
     def take_action(self, parsed_args):
-        return self.format_output({'name':'this is a test'})
+        return self.format_output({})
 
 
